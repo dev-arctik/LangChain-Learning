@@ -1,8 +1,9 @@
-import os
 import langchain
-from langchain_openai import ChatOpenAi
-from dotenv import load_dotenv
+# from langchain_openai import OpenAi
+from langchain_openai import ChatOpenAI
 
-load_dotenv()
+llm = ChatOpenAI(temperature=0.9)
 
-api_key=os.getenv("OPENAI_API_KEY")
+output = llm.invoke("What is google?")
+
+print(output)
