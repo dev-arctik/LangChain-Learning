@@ -1,7 +1,7 @@
 import langchain
-# from langchain_openai import OpenAi
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a world class technical coder."),
@@ -13,7 +13,9 @@ prompt = ChatPromptTemplate.from_messages([
 
 llm = ChatOpenAI(temperature=0.9)
 
-chain = prompt | llm
+output_parser = StrOutputParser()
+
+chain = prompt | llm | output_parser
 
 output = chain.invoke({"input":"what is internet?"})
 
