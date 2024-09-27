@@ -91,14 +91,6 @@ conversational_rag_chain = RunnableWithMessageHistory(
     output_messages_key="answer",
 )
 
-# Invoke the conversational chain
-# response = conversational_rag_chain.invoke(
-#     {"input": "can you simplify it?"},
-#     config={
-#         "configurable": {"session_id": "abc123"}
-#     }
-# )["answer"]
-
 def ask_question(user_msg, id) :
     response = conversational_rag_chain.invoke(
         {"input": user_msg},
