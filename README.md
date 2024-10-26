@@ -14,7 +14,7 @@ To get started with this project, follow these steps:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/dev-arctik/LangChain-Learning.git
-    cd LangGraph_Learning
+    cd LangChain_Learning
     ```
 
 2. **Create a virtual environment** (optional but recommended):
