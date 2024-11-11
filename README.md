@@ -5,6 +5,7 @@ This project documents my learning journey with LangChain, featuring incremental
 ## Table of Contents
 
 - [Installation](#installation)
+- [Setup](#setup)
 - [Usage](#usage)
 
 ## Installation
@@ -38,6 +39,19 @@ To get started with this project, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
+
+## Setup
+
+To run the code effectively, create a `.env` file in the root directory to store your API key. This is necessary for using the OpenAI models.
+
+Create a `.env` file and add the following line:
+
+```plaintext
+OPENAI_API_KEY='your_openai_api_key_here'
+```
+Replace 'your_openai_api_key_here' with your actual OpenAI API key.
+
+Note: If you choose to use a different LLM (Language Learning Model), refer to the LangChain documentation and adjust the code as needed.
 
 ## Usage
 
